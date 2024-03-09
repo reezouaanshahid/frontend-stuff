@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img id="bulb" src="./off.jpeg" alt="error" style="width: 100px; height: 100px;"/>
+
+    <script>
+        setInterval(()=>{
+            let path=document.getElementById('bulb').src 
+            // console.log(path)
+            if (path=='http://127.0.0.1:5500/off.jpeg') {
+                document.getElementById('bulb').src='./on.jpg'
+            }else {
+                document.getElementById('bulb').src='./off.jpeg'
+            }
+        },1000)
+    </script>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="fit.css">
+</head>
+<body>
+<div id="box" class="box"></div>
+<div class="box1">
+    <div id="form2" class="box2">
+        <img src="fitlogo.jpeg" alt="fitlogo" class="top">
+        <img src="logocrt.jpg" alt="logocrt" class="bottom">
+        <h1 class="box3">
+            Certificate of Achievement
+        </h1>
+        <h2 class="box4">
+            Future Institute Of Technology
+        </h2>
+        <h3 class="box5">
+            This is to certify that Mr.______________ S.O/D.O ___________________
+        </h3>
+        <h4 class="box6">
+            Has successfully completed His/Her ______ Month course from FIT institute.
+        </h4>
+        <h5 class="box7"></h5>
+        <h6 class="box9">
+            Signature _________________
+        </h6>
+        <div id="studentDetails" class="box8"></div>
+     
+    </div>
+</div>
+<input placeholder="inter name" type="text"/>
+<input placeholder="inter name" type="text"/>
+<input placeholder="inter name" type="text"/>
+
+<button onclick="as()">push</button>
+
+
+<script>
+    var students = [
+        { name: "Ibad", age: 24, CNIC: "3435463652455", father: '___________'},
+        { name: "Ali", age: 22, CNIC: "3435464636525", father: '___________'},
+        { name: "Iram", age: 25, CNIC: "3435463652545", father: '___________'},
+        { name: "Asif", age: 23, CNIC: "3435456636525", father: '___________'},
+        { name: "Asim", age: 27, CNIC: "3435463652565", father: '___________'},
+        { name: "Hamza", age: 29, CNIC: "3435475636525", father: '___________'},
+        { name: "Iqra", age: 28, CNIC: "34354566365275", father: '___________'},
+        { name: "Sameer", age: 18, CNIC: "3435456636525", father: '___________'},
+        { name: "Laiba", age: 26, CNIC: "343545436525", father: '___________'},
+        { name: "Manzoor", age: 20, CNIC: "1520286538425", father: '___________'}
+    ];
+
+    let data = '<table>';
+    for (let i = 0; i < students.length; i++) {
+        const student = students[i];
+        data += `
+            <tr>
+                <td>Name: ${student.name}
+                    <button onclick="showStudentDetails(${i})">Submit</button>
+                </td>
+            </tr>
+        `;
+    }
+    data += '</table>';
+
+    document.getElementById('box').innerHTML = data;
+
+    function showStudentDetails(index) {
+        const student = students[index];
+        const details = `
+            <h2>Student Details</h2>
+            <p>Name: ${student.name}</p>
+            <p>Age: ${student.age}</p>
+            <p>CNIC: ${student.CNIC}</p>
+            <p>Father: ${student.father}</p>
+        `;
+        document.getElementById('studentDetails').innerHTML = details;
+    }
+</script>
+</body>
+</html>

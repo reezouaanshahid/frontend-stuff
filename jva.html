@@ -1,0 +1,106 @@
+<html lang="en">
+  <body>
+    <div id="first">
+      <table border="1px">
+        <tr>
+          <td colspan="3" style="text-align: center">Coffe menu</td>
+        </tr>
+        <tr>
+          <td style="text-align: center">Coffe Black</td>
+          <td style="text-align: center">1</td>
+        </tr>
+        <tr>
+          <td style="text-align: center">Coffe cold</td>
+          <td style="text-align: center">2</td>
+        </tr>
+      </table>
+    </div>
+                      <!-- logic -->
+    <div id="second">
+      <input id="fmenu" placeholder="Enter you choice" type="number" />
+      <button onclick="{
+        let value=document.getElementById('fmenu').value;
+      if(value==1)
+      {
+        document.getElementById('forth').style.display='none'
+
+        document.getElementById('third').style.display='block'
+      }else if(value==2)
+      {
+        document.getElementById('forth').style.display='block'
+
+        document.getElementById('third').style.display='none'
+
+      } 
+        }
+
+        ">Check</button>
+    </div>
+    <div  id="third" style="display: none;" >
+    <div >
+        <table border="1px">
+          <tr>
+            <td colspan="3" style="text-align: center">Coffe Black menu</td>
+          </tr>
+          <tr>
+            <td style="text-align: center">Coffe Black with suger</td>
+            <td style="text-align: center">1</td>
+          </tr>
+          <tr>
+            <td style="text-align: center">Coffe Black without suger</td>
+            <td style="text-align: center">2</td>
+          </tr>
+        </table>
+      </div>
+      <div  >
+        <input id="yes" placeholder="Enter you choice" type="number" />
+        <button onclick="{
+        let value=document.getElementById('yes').value;
+if(value==1)
+{
+    alert('thank you for select coofe balck with suger!')
+}else{
+    alert('thank you for select coofe balck with out suger!')
+
+}
+        }">Check</button>
+      </div>
+    </div>
+
+    <!-- cold logic -->
+
+    <div  id="forth" style="display: none;" >
+        <div >
+            <table border="1px">
+              <tr>
+                <td colspan="3" style="text-align: center">Cold  Coffe menu</td>
+              </tr>
+              <tr>
+                <td style="text-align: center">Coffe cold with suger</td>
+                <td style="text-align: center">1</td>
+              </tr>
+              <tr>
+                <td style="text-align: center">Coffe cold without suger</td>
+                <td style="text-align: center">2</td>
+              </tr>
+            </table>
+          </div>
+          <div  >
+            <input id="yes" placeholder="Enter you choice" type="number" />
+            <button onclick="{
+            let value=document.getElementById('yes').value;
+    if(value==2)
+    {
+        alert('thank you for select cold coofe balck with suger!')
+    }else{
+        alert('thank you for select cold coofe balck with out suger!')
+    
+    }
+            }">Check</button>
+          </div>
+        </div>
+    
+    
+    
+  </body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="table">
+        <img  id="no" src="./off.jpeg" style="width: 100px;height: 100px;"/>
+        <div class="table2">
+            <table>
+                <tr>
+                    <td><input type="text" onkeyup="check()" id="check" placeholder="Enter a name"></td>
+                </tr>
+                
+            </table>
+            
+        </div>
+    </div>
+    <div class="data" id="data"></div>
+
+    <script>
+        let students = [
+            { name: "ibad", age: 24, gender: 'boys' },
+            { name: "Ali", age: 24, gender: 'boys' },
+            { name: "iraf", age: 24, gender: 'boys' },
+            { name: "iraf4", age: 25, gender: 'boys' },
+            { name: "iraf5", age: 26, gender: 'boys' },
+            { name: "iqra1", age: 27, gender: 'girls' },
+            { name: "iqra2", age: 28, gender: 'girls' },
+            { name: "iqra3", age: 29, gender: 'girls' },
+            { name: "iqra4", age: 21, gender: 'girls' },
+            { name: "iqra5", age: 20, gender: 'girls' },
+        ];
+
+        var boy = [];
+        var girl = [];
+        for (let i = 0; i < students.length; i++) {
+            const student = students[i];
+            if (student.gender === 'boys') {
+                boy.push(student);
+            } else if (student.gender === 'girls') {
+                girl.push(student);
+            }
+        }
+
+        var concat = boy.concat(girl);
+
+
+        var table = "<table><tr><th>Name</th><th>Age</th><th>Gender</th></tr>";
+        for (let i = 0; i < concat.length; i++) {
+            table += "<tr><td>" + concat[i].name + "</td><td>" + concat[i].age + "</td><td>" + concat[i].gender + "</td></tr>";
+        }
+        table += "</table>";
+
+       
+        document.getElementById('data').innerHTML = table;
+        function check() {
+         var value=document.getElementById('check').value
+   let list= students.filter(e=>{
+        return e.name.toLowerCase().includes(value);
+       });
+       
+       var table = "<table><tr><th>Name</th><th>Age</th><th>Gender</th></tr>";
+        for (let i = 0; i < list.length; i++) {
+            table += "<tr><td>" + list[i].name + "</td><td>" + list[i].age + "</td><td>" + list[i].gender + "</td></tr>";
+        }
+        table += "</table>";
+
+       
+        document.getElementById('data').innerHTML = table;
+        }
+        setInterval(()=>{
+            let path=document.getElementById('no').src
+           if(path=="http://127.0.0.1:5500/off.jpeg")
+           {
+            document.getElementById('no').src='./on.jpg'
+           }else{
+            document.getElementById('no').src='./off.jpeg'
+           }
+        },2000)
+    </script>
+</body>
+</html>
+
+
+
+
+

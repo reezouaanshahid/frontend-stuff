@@ -1,0 +1,68 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+.table {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+}
+.table2 {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+th, td {
+    margin-top: 10px;
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+tr:hover {
+    background-color: #f5f5f5;
+    ;
+}
+input[type="text"] {
+    padding: 10px;
+    border-radius: 5px;
+}
+#data {
+    margin-top: 20px;
+}
+
+
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+#videoBG {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1; /* Place the video behind other elements */
+}
+
+.container {
+    z-index: 1; /* Ensure your content appears above the video */
+    /* Additional styling for your container if needed */
+}

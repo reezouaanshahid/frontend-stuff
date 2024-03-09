@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img id="mock" src="./off.jpeg" alt="error"/>
+    
+
+
+    <script>
+        setInterval(()=>{
+         let path=document.getElementById('mock').src
+            if (path=='http://127.0.0.1:5500/off.jpeg') {
+                document.getElementById('moke').src='./on.jpg'
+            } else {
+                document.getElementById('moke').src='./off.jpeg'
+        }
+        },2000)
+
+    </script>
+</body>
+</html>

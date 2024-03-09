@@ -1,0 +1,64 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>
+        1 for puop
+    </h1>
+    <h1>
+        2 for lapo
+    </h1>
+    <input placeholder="Enter 1 or 2" type="number" id="choice1"/>
+    <input style="display: none;" placeholder="Enter review for pupo" type="text" id="pupo"/>
+    <input style="display: none;" placeholder="Enter review for lapo" type="text" id="lapo"/>
+
+<div id="review">
+
+</div>
+    <script>
+        let puop=[]
+        let lapo=[]
+        
+        document.getElementById('choice1').addEventListener('change',(e)=>{
+            if(e.target.value==1)
+            {
+document.getElementById('pupo').style.display="block"
+            } else if(e.target.value==2)
+            {
+                document.getElementById('lapo').style.display='block'
+                
+            }
+            
+        })
+        document.getElementById('pupo').addEventListener('change',(e)=>{
+            puop.push(e.target.value)
+document.getElementById('pupo').style.display="none"
+document.getElementById('lapo').style.display='none'
+let data=`<h1>
+            Review for pupo
+            </h1>`
+        for (let i = 0; i < puop.length; i++) {
+            const element = puop[i];
+            data+=`<p>
+                ${element}
+                </p>`
+        }
+        let data2=`<h1>
+            Review for lapo
+            </h1>`
+        for (let i = 0; i < lapo.length; i++) {
+            const element = lapo[i];
+            data+=`<p>
+                ${element}
+                </p>`
+        }
+        
+        document.getElementById("review").innerHTML=data
+        })
+        
+    </script>
+</body>
+</html>

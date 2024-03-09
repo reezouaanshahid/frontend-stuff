@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <dev class="table">
+        <dev class="table2">
+        <h1 class="h1">select one</h1>
+        <table>
+            <tr>
+                <td><input id="button">for hot coffie /></td>
+                <td><button id="button2">for colde coffie</button></td>
+            </tr>
+        </table>
+    </dev>
+</dev>
+    <dev>
+      
+        <dev id="content" class="hot">
+            <h1 class="hp">wellcome to the coffie store</h1>
+        </dev>
+        <dev id="content2" class="cold">
+            <!-- <h1>cold coffie</h1>  -->
+        </dev>
+    </dev>
+
+    
+
+    <script>
+
+        
+        let button = document.getElementById('button');
+        let button2 = document.getElementById('button2');
+
+        button.addEventListener("click", function() {
+            content.textContent = 'Hot coffie';
+        });
+
+        button2.addEventListener("click", function() {
+            content.textContent = 'cold coffie';
+        });
+    </script>
+</body>
+</html>
