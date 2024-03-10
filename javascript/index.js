@@ -94,11 +94,7 @@
 //     }
 // }
 
-// let boy ='rizwan'
-// let boyage=23
-// let girl = 'zaib'
-// let girlage=22
-// console.log(boy,"is",boyage,"and the", girl,"is",girlage,"years old");
+
 
 // function clic() {
 //     let inp = document.getElementById('inpt').value;
